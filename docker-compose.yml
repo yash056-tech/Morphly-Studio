@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  omnitools:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: omnitools-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    tmpfs:
+      # Memory-based temporary filesystem ensuring physical zero retention
+      - /tmp:rw,noexec,nosuid,size=256m
