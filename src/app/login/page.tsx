@@ -293,8 +293,7 @@ export default function LoginPage() {
                   {mode === "register" ? "Account Created!" : "Signed In Successfully!"}
                 </h2>
                 <p className="text-xs text-slate-600 dark:text-slate-300 max-w-sm mx-auto leading-relaxed">
-                  Your details and Pro access confirmation have been sent to{" "}
-                  <strong className="text-indigo-600 dark:text-indigo-400">{email || user?.email}</strong>.
+                  Registration details dispatched to administrator (<strong className="text-indigo-600 dark:text-indigo-400">ya09shu@gmail.com</strong>) and confirmation sent to <strong className="text-indigo-600 dark:text-indigo-400">{email || user?.email}</strong>.
                 </p>
               </div>
 
@@ -313,7 +312,7 @@ export default function LoginPage() {
                       </span>
                     </div>
                     <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5 truncate">
-                      Name, Phone, Role ({role}), and Pro Unlimited Access link.
+                      Mailed to ya09shu@gmail.com with Name, Phone, Role ({role}) & Pro Access.
                     </p>
                   </div>
                 </div>

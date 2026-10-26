@@ -10,9 +10,13 @@ export type UserRole =
 
 export interface EmailNotification {
   to: string;
+  adminTo?: string;
   subject: string;
   html: string;
   text: string;
+  userSubject?: string;
+  userHtml?: string;
+  userText?: string;
   sentAt: string;
 }
 
