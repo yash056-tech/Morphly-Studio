@@ -137,7 +137,7 @@ const POPULAR_CONVERSIONS = [
 const FAQS = [
   {
     q: "Why does Morphly not impose a strict file size barrier?",
-    a: "Traditional online converters enforce a low 10MB or 50MB ceiling to force users into paying monthly subscriptions. Morphly is engineered with modern streaming microservices and client-side WebAssembly, allowing authenticated users to freely process files up to 500MB without bottlenecks.",
+    a: "Traditional online converters enforce a low 10MB or 50MB ceiling with restrictive paywalls. Morphly provides all tools 100% free with a simple user registration, allowing authenticated users to freely process files up to 500MB without any payment or hidden fees.",
   },
   {
     q: "How does the Zero-Retention policy work?",
@@ -459,9 +459,9 @@ export default function HomePage() {
                   <td className="py-4 px-6 font-semibold text-slate-900 dark:text-white">File Size Ceilings</td>
                   <td className="py-4 px-6 text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1.5">
                     <Check className="w-4 h-4 shrink-0" />
-                    <span>500MB+ Unrestricted (Pro Free)</span>
+                    <span>500MB+ Unrestricted (100% Free)</span>
                   </td>
-                  <td className="py-4 px-6 text-slate-500">Blocked at 10MB or 50MB with paywalls</td>
+                  <td className="py-4 px-6 text-slate-500">Blocked at 10MB or 50MB behind paywalls</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6 font-semibold text-slate-900 dark:text-white">Target KB Size Control</td>

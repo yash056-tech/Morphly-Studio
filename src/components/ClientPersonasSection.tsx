@@ -179,13 +179,13 @@ export const SOLUTIONS_CONFIG: SolutionOffering[] = [
       "Universal Cross-Format Support: Seamlessly switch between PDF, Word, PowerPoint, Markdown, and Text."
     ],
     bottleneckSolved: {
-      problem: "Traditional tools charge $20/month per seat and block conversions with low 10 MB file limits.",
+      problem: "Traditional tools enforce strict file limits and restrict multi-document batch conversions.",
       morphlyFix: "Morphly is 100% free with unlimited 500 MB capacity and instant zero-retention processing."
     },
     metrics: {
       before: "Locked 45 MB Candidate Dossier",
       after: "Editable Microsoft Word (.docx)",
-      gain: "Zero Per-Seat Fees"
+      gain: "100% Free Lifetime Access"
     },
     toolUrl: "/pdf-to-word",
     toolActionLabel: "Convert Candidate Resumes & Contracts",

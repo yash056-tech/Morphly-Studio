@@ -196,8 +196,8 @@ export async function POST(req: NextRequest) {
           <td class="detail-value">${organization}</td>
         </tr>
         <tr>
-          <td class="detail-label">Assigned Plan</td>
-          <td class="detail-value" style="color: #16a34a;">Pro Unlimited Access (500MB+ Unlocked)</td>
+          <td class="detail-label">Access Level</td>
+          <td class="detail-value" style="color: #16a34a;">100% Free Lifetime Access (500MB+ Unlocked)</td>
         </tr>
         <tr>
           <td class="detail-label">Registration Time (IST)</td>
@@ -244,7 +244,7 @@ REGISTERED USER DETAILS:
 - Mobile Number: ${phone}
 - Role / Category: ${role}
 - Organization / College: ${organization}
-- Plan: Pro Unlimited (500MB+ Access)
+- Access Tier: 100% Free Lifetime Access (500MB+ Unlocked)
 - Registration Time (IST): ${timestampIST}
 - Timestamp (UTC): ${timestampUTC}
 

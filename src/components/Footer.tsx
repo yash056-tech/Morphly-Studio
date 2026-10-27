@@ -56,7 +56,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/login" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-                  Account & Unlimited Pass
+                  Free Account & Unlimited Access
                 </Link>
               </li>
             </ul>
