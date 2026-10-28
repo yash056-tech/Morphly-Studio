@@ -1,6 +1,6 @@
-# OmniTools - Universal Any-to-Any File Converter & Image Studio
+# Morphly - Universal Any-to-Any File Converter & Image Studio
 
-OmniTools is a high-speed, privacy-first web application featuring three primary utility suites:
+Morphly is a high-speed, privacy-first web application featuring two primary utility suites:
 
 1. **Universal File & Document Converter** — Convert **any file format into any other file format**:
    - **PDF** ➔ Word (`.docx`), Excel (`.xlsx`, `.csv`), Text (`.txt`), Markdown (`.md`), HTML (`.html`), Images (`.png`, `.jpg`).
@@ -21,8 +21,6 @@ OmniTools is a high-speed, privacy-first web application featuring three primary
    - **Filters & Privacy**: Grayscale / B&W filter toggle, EXIF & tracking metadata stripping.
    - **Export Formats**: WebP, JPEG / JPG, PNG, AVIF, BMP, ICO (Favicon), PDF Document, and SVG.
    - **100% In-Browser Execution**: Processed using HTML5 Canvas & WebWorkers. Images never touch any external server.
-
-3. **Code Formatter & Beautifier** — Monaco Editor (VS Code) interface with syntax highlighting and client-side AST Prettier parsing for HTML, CSS, JavaScript, JSON, and PEP 8 standardization for Python.
 
 ---
 
@@ -45,5 +43,4 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 ## 🛡️ Privacy Guarantee
 
 - **Images**: 100% In-Browser Canvas / WebWorker (0 bytes sent to server).
-- **Code**: 100% In-Browser Prettier (0 bytes sent to server).
 - **Documents & Files**: Ephemeral memory execution with instantaneous file deletion upon stream completion.

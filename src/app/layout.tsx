@@ -18,9 +18,6 @@ export const metadata: Metadata = {
     "Image Compressor",
     "WebP Converter",
     "AVIF encoder",
-    "Code Formatter",
-    "Monaco Editor",
-    "Prettier online",
     "Zero retention converter",
     "Privacy file tools",
     "Sarkari exam photo resizer",
@@ -30,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Morphly — Universal Document Converter & Image Studio",
     description:
-      "Convert documents to any format, compress images in all modes, and format multi-language code. 100% ephemeral and client-side processing.",
+      "Convert documents to any format and compress images in all modes. 100% ephemeral and client-side processing.",
     url: "https://morphly.pro",
     siteName: "Morphly",
     locale: "en_US",
@@ -39,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Morphly — Universal Utility Studio",
-    description: "Convert any file, compress images, and format code with zero data retention.",
+    description: "Convert any file and compress images with zero data retention.",
   },
 };
 

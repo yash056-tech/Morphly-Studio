@@ -13,7 +13,6 @@ import {
   ArrowRight, 
   FileType, 
   ImageIcon, 
-  Code2, 
   ShieldCheck, 
   Zap, 
   Minimize2,
@@ -37,7 +36,7 @@ const INITIAL_MESSAGES: Message[] = [
   {
     id: "welcome-1",
     sender: "bot",
-    text: "Hello! I'm your Morphly Help Assistant. How can I assist you with document conversion, image compression, or code formatting today?",
+    text: "Hello! I'm your Morphly Help Assistant. How can I assist you with document conversion or image compression today?",
     time: "Just now",
   },
 ];
@@ -47,7 +46,7 @@ const SUGGESTIONS = [
   "How to convert PDF to Word (.docx)?",
   "How to compress an image under 100 KB?",
   "Is my uploaded document private?",
-  "How to format Python or JSON code?",
+  "How to convert PDF to Excel (.xlsx)?",
   "How to lift the 50MB file size limit?",
 ];
 
@@ -119,21 +118,10 @@ export function HelpAssistant() {
       };
     }
 
-    // Code Formatting
-    if (q.includes("code") || q.includes("format") || q.includes("python") || q.includes("json") || q.includes("javascript") || q.includes("prettier") || q.includes("indent")) {
-      return {
-        text: "The Code Formatter uses the official VS Code Monaco Editor and Prettier Standalone parser. It formats HTML, CSS, JavaScript, TypeScript, JSON, and Python (with official PEP 8 indentation). All parsing executes client-side without sending your code to any remote server.",
-        actionLink: {
-          text: "Open Code Beautifier",
-          href: "/code-formatter",
-        },
-      };
-    }
-
     // Privacy & Zero Retention
     if (q.includes("private") || q.includes("safe") || q.includes("security") || q.includes("retention") || q.includes("store") || q.includes("save")) {
       return {
-        text: "Morphly enforces a strict Zero-Retention policy. Images and source code are processed 100% locally in your browser (HTML5 Canvas & WebAssembly). Heavy document conversions execute in volatile server RAM and are immediately purged the moment your download starts.",
+        text: "Morphly enforces a strict Zero-Retention policy. Images are processed 100% locally in your browser (HTML5 Canvas & WebAssembly). Heavy document conversions execute in volatile server RAM and are immediately purged the moment your download starts.",
         actionLink: {
           text: "Read Privacy Policy",
           href: "/privacy",
@@ -167,7 +155,7 @@ export function HelpAssistant() {
 
     // Generic fallback
     return {
-      text: "I can help you with: 1) Universal File Conversion (PDF to Word, Excel, Images), 2) All-Options Image Studio (Lossless, Target KB, WebP/AVIF), 3) Monaco Code Formatter (HTML, JS, Python PEP 8), or 4) Privacy & account questions. What would you like to know?",
+      text: "I can help you with: 1) Universal File Conversion (PDF to Word, Excel, PPTX, Images), 2) All-Options Image Studio (Lossless, Target KB, WebP/AVIF), or 3) Privacy & account questions. What would you like to know?",
     };
   };
 

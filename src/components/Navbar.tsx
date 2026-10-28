@@ -9,7 +9,6 @@ import { useAuth } from "@/lib/auth";
 import { 
   FileType, 
   Image as ImageIcon, 
-  Code2, 
   ShieldCheck, 
   Menu, 
   X,
@@ -34,12 +33,6 @@ const NAV_ITEMS = [
     href: "/image-compressor",
     icon: ImageIcon,
     badge: "In-Browser",
-  },
-  {
-    name: "Code Formatter",
-    href: "/code-formatter",
-    icon: Code2,
-    badge: "Monaco",
   },
   {
     name: "About & Privacy",

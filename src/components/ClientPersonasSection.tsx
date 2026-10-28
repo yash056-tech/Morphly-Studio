@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { 
   GraduationCap, 
-  Code2, 
+  Terminal, 
   Calculator, 
   Palette, 
   Building2, 
@@ -78,31 +78,31 @@ export const SOLUTIONS_CONFIG: SolutionOffering[] = [
   {
     id: "developers",
     category: "Software Engineers",
-    targetAudience: "Full-Stack Developers, DevOps & Engineering Teams",
-    badge: "💻 Dev & Cloud Engineering Suite",
-    icon: Code2,
+    targetAudience: "Full-Stack Developers, DevOps & Technical Documentation Teams",
+    badge: "💻 Dev & Documentation Suite",
+    icon: Terminal,
     imageSrc: "/images/clients/software-engineer.jpg",
     imageAlt: "Software engineers developing code with vertical dual-screen setups",
-    headline: "What We Offer to Developers & Software Engineers",
-    description: "Studio-grade code formatting and syntax restructuring powered by official AST parsers with zero telemetry.",
+    headline: "What We Offer to Developers & Technical Teams",
+    description: "Universal technical document conversion, Markdown-to-PDF formatting, and high-performance WebP/AVIF asset optimization.",
     whatWeOffer: [
-      "Monaco Editor Engine: Same powerful editor interface as VS Code with minimap, line numbers, and error detection.",
-      "Prettier Standalone AST: Mathematically consistent AST parsing for HTML, CSS, JavaScript, TypeScript, JSON, and Python (PEP 8).",
-      "Zero Telemetry / Total Code Privacy: Parsing runs 100% locally in browser Web Workers—no proprietary code or API tokens touch any server.",
-      "Instant Clipboard Sync: 1-click beautify, validate, and copy formatted output."
+      "Markdown & Technical Specs to PDF: Convert architecture documents, GitHub READMEs, and API schemas to publication-ready PDFs.",
+      "High-Performance Web Asset Studio: Compress PNG and SVG assets into ultra-lightweight WebP and AVIF formats with alpha transparency.",
+      "Zero Telemetry / Total Privacy: Conversions run in volatile memory and browser canvas—no internal docs or proprietary assets are retained.",
+      "Universal Any-to-Any Support: Seamlessly switch between Markdown, HTML, JSON, CSV, PDF, and DOCX."
     ],
     bottleneckSolved: {
-      problem: "Online formatters send proprietary code, API tokens, or customer data to third-party logging servers.",
-      morphlyFix: "Morphly bundles Prettier Standalone directly in your browser—zero network requests are made."
+      problem: "Online conversion tools log confidential system designs, architecture blueprints, and API payloads.",
+      morphlyFix: "Morphly runs zero-retention ephemeral pipelines—files are wiped the moment the download starts."
     },
     metrics: {
-      before: "450 KB Minified API Payload",
-      after: "Formatted Prettier / PEP-8 AST",
-      gain: "0 ms Server Latency"
+      before: "Heavy Technical Docs & Assets",
+      after: "Clean PDF & Lightweight WebP",
+      gain: "Zero File Retention"
     },
-    toolUrl: "/code-formatter",
-    toolActionLabel: "Launch Monaco Code Formatter",
-    favoriteTool: "Monaco Code Beautifier"
+    toolUrl: "/pdf-to-word",
+    toolActionLabel: "Launch Developer Document Suite",
+    favoriteTool: "Universal Document Suite"
   },
   {
     id: "finance",

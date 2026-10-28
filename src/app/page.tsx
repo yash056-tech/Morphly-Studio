@@ -5,7 +5,6 @@ import Link from "next/link";
 import { 
   FileType, 
   Image as ImageIcon, 
-  Code2, 
   ShieldCheck, 
   Zap, 
   Cpu, 
@@ -26,7 +25,6 @@ import {
   X,
   FileSpreadsheet,
   FileText,
-  FileCode,
   Laptop
 } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -55,19 +53,6 @@ const ImageCompressorTool = dynamic(
       <div className="w-full py-16 flex flex-col items-center justify-center gap-3">
         <div className="w-8 h-8 rounded-full border-2 border-indigo-600 border-t-transparent animate-spin" />
         <p className="text-xs text-slate-500 font-medium">Loading Image Studio Engine...</p>
-      </div>
-    ),
-    ssr: false,
-  }
-);
-
-const CodeFormatterTool = dynamic(
-  () => import("@/components/CodeFormatterTool").then((m) => m.CodeFormatterTool),
-  {
-    loading: () => (
-      <div className="w-full py-16 flex flex-col items-center justify-center gap-3">
-        <div className="w-8 h-8 rounded-full border-2 border-indigo-600 border-t-transparent animate-spin" />
-        <p className="text-xs text-slate-500 font-medium">Loading Monaco Editor Engine...</p>
       </div>
     ),
     ssr: false,
@@ -107,22 +92,6 @@ const TOOLS_CONFIG = [
       "Runs entirely in HTML5 Canvas — zero server upload",
     ],
   },
-  {
-    id: "code-formatter",
-    title: "Monaco Code Formatter & Beautifier",
-    description:
-      "Format, standardize, and indent HTML, CSS, JavaScript, TypeScript, JSON, and Python using the engine that powers VS Code and Prettier Standalone AST parser.",
-    href: "/code-formatter",
-    icon: Code2,
-    badge: "VS Code Monaco Engine",
-    gradient: "from-violet-600 via-purple-600 to-fuchsia-600",
-    features: [
-      "Official VS Code Monaco Editor interface",
-      "AST-level Prettier standalone syntax parsing",
-      "Python PEP 8 indentation and structure normalizer",
-      "1-Click clipboard copy and downloadable output",
-    ],
-  },
 ];
 
 const POPULAR_CONVERSIONS = [
@@ -131,7 +100,7 @@ const POPULAR_CONVERSIONS = [
   { from: "DOCX / MD", to: "PDF", label: "Document to PDF", desc: "Publish-ready vector formatting", badge: "Essential" },
   { from: "XLSX / CSV", to: "JSON", label: "Spreadsheet to JSON", desc: "Developer key-value data", badge: "Dev" },
   { from: "JPG / PNG", to: "ICO", label: "Favicon Generator", desc: "Multi-size website icon (.ico)", badge: "Design" },
-  { from: "RAW CODE", to: "Clean AST", label: "Code Beautifier", desc: "Standardize spacing & tabs", badge: "Clean" },
+  { from: "PDF", to: "XLSX", label: "PDF to Excel", desc: "Extract financial tables & statements", badge: "Finance" },
 ];
 
 const FAQS = [
@@ -141,20 +110,16 @@ const FAQS = [
   },
   {
     q: "How does the Zero-Retention policy work?",
-    a: "Your privacy is our baseline. Image compression and code formatting execute 100% inside your browser using HTML5 Canvas and client-side JavaScript—your images never leave your computer. For document conversions requiring server execution, files are held temporarily in RAM only during the conversion process and are permanently wiped the instant the download stream starts.",
+    a: "Your privacy is our baseline. Image compression executes 100% inside your browser using HTML5 Canvas and client-side WebAssembly—your images never leave your computer. For document conversions requiring server execution, files are held temporarily in RAM only during the conversion process and are permanently wiped the instant the download stream starts.",
   },
   {
     q: "Can I convert images to a specific file size limit (e.g., under 200 KB)?",
     a: "Yes! In the Image Studio, toggle 'Target Exact Max Size (KB)' and enter your required threshold (e.g. 50 KB, 100 KB, or 200 KB). The engine uses an iterative binary search algorithm in your browser to calculate the optimal quality factor and scale to match your requirement.",
   },
-  {
-    q: "Are the formatted code snippets saved or transmitted to a server?",
-    a: "No. The Monaco Code Formatter uses Prettier Standalone directly in your browser. All syntax tree parsing, indentation formatting, and syntax validation happen locally on your device with zero network calls.",
-  },
 ];
 
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState<"converter" | "image" | "code">("converter");
+  const [activeTab, setActiveTab] = useState<"converter" | "image">("converter");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const { isAuthenticated, openAuthModal, user } = useAuth();
 
@@ -190,7 +155,7 @@ export default function HomePage() {
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.12]">
-            Convert, compress, and format{" "}
+            Convert and compress files{" "}
             <span className="bg-gradient-to-r from-indigo-500 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
               without compromises.
             </span>
@@ -198,7 +163,7 @@ export default function HomePage() {
 
           {/* Subtitle */}
           <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
-            Bespoke web utilities designed for students, developers, and creatives. Universal any-to-any document conversion, all-options in-browser image compression, and Monaco AST code formatting.
+            Bespoke web utilities designed for students, professionals, and creators. Universal any-to-any document conversion and all-options in-browser image compression with strict zero data retention.
           </p>
 
           {/* Action Button Bar */}
@@ -226,13 +191,6 @@ export default function HomePage() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold text-slate-700 dark:text-slate-300 bg-white/80 dark:bg-slate-900/80 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 backdrop-blur-sm transition-all"
             >
               <span>Image Studio (All Formats)</span>
-            </Link>
-
-            <Link
-              href="/code-formatter"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold text-slate-700 dark:text-slate-300 bg-white/80 dark:bg-slate-900/80 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 backdrop-blur-sm transition-all"
-            >
-              <span>Code Beautifier</span>
             </Link>
           </div>
 
@@ -283,7 +241,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-6 sm:gap-8">
             {TOOLS_CONFIG.map((tool) => (
               <ToolCard
                 key={tool.id}
@@ -319,7 +277,7 @@ export default function HomePage() {
             {POPULAR_CONVERSIONS.map((item, idx) => (
               <Link
                 key={idx}
-                href={item.to === "WebP" || item.to === "ICO" ? "/image-compressor" : item.to === "Clean AST" ? "/code-formatter" : "/pdf-to-word"}
+                href={item.to === "WebP" || item.to === "ICO" ? "/image-compressor" : "/pdf-to-word"}
                 className="p-4 rounded-2xl glass-card hover:border-indigo-400/80 dark:hover:border-indigo-500/80 transition-all group flex items-center justify-between"
               >
                 <div className="space-y-1">
@@ -354,7 +312,7 @@ export default function HomePage() {
               Try Any Tool Right Now
             </h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
-              Switch between the tools below to convert documents, compress images, or format code directly on this page.
+              Switch between the tools below to convert documents or compress images directly on this page.
             </p>
           </div>
 
@@ -384,18 +342,6 @@ export default function HomePage() {
                 <ImageIcon className="w-4 h-4" />
                 <span>Image Studio</span>
               </button>
-
-              <button
-                onClick={() => setActiveTab("code")}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all ${
-                  activeTab === "code"
-                    ? "bg-indigo-600 text-white shadow-md shadow-indigo-500/20"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
-                }`}
-              >
-                <Code2 className="w-4 h-4" />
-                <span>Code Formatter</span>
-              </button>
             </div>
           </div>
 
@@ -409,11 +355,6 @@ export default function HomePage() {
             {activeTab === "image" && (
               <div className="animate-fade-in">
                 <ImageCompressorTool />
-              </div>
-            )}
-            {activeTab === "code" && (
-              <div className="animate-fade-in">
-                <CodeFormatterTool />
               </div>
             )}
           </div>
@@ -472,12 +413,12 @@ export default function HomePage() {
                   <td className="py-4 px-6 text-slate-500">Basic arbitrary low/med/high quality only</td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 font-semibold text-slate-900 dark:text-white">Code Formatting Engine</td>
+                  <td className="py-4 px-6 font-semibold text-slate-900 dark:text-white">Cross-Format Document Matrix</td>
                   <td className="py-4 px-6 text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1.5">
                     <Check className="w-4 h-4 shrink-0" />
-                    <span>Monaco Editor + Prettier AST</span>
+                    <span>Any ➔ Any (PDF, Word, Excel, PPTX, HTML, Images)</span>
                   </td>
-                  <td className="py-4 px-6 text-slate-500">Regex-based beautifier / plain textareas</td>
+                  <td className="py-4 px-6 text-slate-500">Rigid single-directional conversions only</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6 font-semibold text-slate-900 dark:text-white">Queue Waiting Times</td>
@@ -549,7 +490,7 @@ export default function HomePage() {
             applicationCategory: "UtilityApplication",
             operatingSystem: "Web",
             description:
-              "Universal file converter, client-side image compression studio, and Monaco code formatter with zero data retention.",
+              "Universal file converter and client-side image compression studio with zero data retention.",
             offers: {
               "@type": "Offer",
               price: "0",

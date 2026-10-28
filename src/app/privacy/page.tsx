@@ -45,7 +45,7 @@ export default function PrivacyPage() {
               <span>Zero-Storage Guarantee</span>
             </h3>
             <p className="text-xs text-slate-600 dark:text-slate-300">
-              <strong>We do not retain, index, inspect, share, or sell your files.</strong> Image compression and code formatting execute 100% locally in your web browser using HTML5 Canvas and WebAssembly. Document conversions running on our server are held in volatile RAM only for the duration of the conversion and are instantly and irrevocably unlinked from storage.
+              <strong>We do not retain, index, inspect, share, or sell your files.</strong> Image compression executes 100% locally in your web browser using HTML5 Canvas and WebAssembly. Document conversions running on our server are held in volatile RAM only for the duration of the conversion and are instantly and irrevocably unlinked from storage.
             </p>
           </div>
         </section>

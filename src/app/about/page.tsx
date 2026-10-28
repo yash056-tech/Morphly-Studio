@@ -55,7 +55,7 @@ export default function AboutPage() {
           </div>
           <h3 className="font-bold text-base text-slate-900 dark:text-white">Client-Side First</h3>
           <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-            Where others burn cloud bandwidth and log your pictures, our image compressor and code formatter run 100% inside your browser using WebAssembly and HTML5 Canvas.
+            Where others burn cloud bandwidth and log your pictures, our image compressor runs 100% inside your browser using WebAssembly and HTML5 Canvas.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function AboutPage() {
       <div className="p-8 rounded-3xl glass-card space-y-4">
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Who Uses Morphly?</h2>
         <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-          Morphly is actively relied upon by software engineers formatting complex API JSON payloads, university researchers converting multi-table papers to Word, and product designers optimizing high-resolution imagery into next-generation AVIF and WebP formats.
+          Morphly is actively relied upon by students and applicants preparing government portal photos, university researchers converting multi-table papers to Word, and product designers optimizing high-resolution imagery into next-generation AVIF and WebP formats.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 text-center">
           <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-900/50">

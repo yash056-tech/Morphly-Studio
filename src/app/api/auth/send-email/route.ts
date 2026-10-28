@@ -214,7 +214,6 @@ export async function POST(req: NextRequest) {
         <ul style="margin: 6px 0 0 0; padding-left: 18px; line-height: 1.6;">
           <li>Universal Any-to-Any File Converter (PDF, Word, Excel, PPTX up to 500MB+)</li>
           <li>All-Options Image Studio (Target KB, Scaling, WebP/AVIF Transcoding)</li>
-          <li>Monaco AST Code Formatter with Zero-Retention</li>
         </ul>
       </div>
 

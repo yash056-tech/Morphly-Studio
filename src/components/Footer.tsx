@@ -17,8 +17,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-xs text-slate-600 dark:text-slate-400 max-w-sm leading-relaxed">
-              Studio-grade web utilities built for developers, designers, and students worldwide.
-              Images and source code are compressed and formatted 100% inside your browser. Documents are converted in volatile memory and purged immediately.
+              Studio-grade web utilities built for professionals, designers, and students worldwide.
+              Images are compressed 100% inside your browser. Documents are converted in volatile memory and purged immediately.
             </p>
             <div className="flex flex-wrap items-center gap-3 pt-2 text-[11px] text-slate-500 dark:text-slate-400">
               <span className="flex items-center gap-1 font-medium">
@@ -47,11 +47,6 @@ export function Footer() {
               <li>
                 <Link href="/image-compressor" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                   All-Options Image Studio
-                </Link>
-              </li>
-              <li>
-                <Link href="/code-formatter" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-                  Monaco Code Formatter
                 </Link>
               </li>
               <li>
